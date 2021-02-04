@@ -27,6 +27,11 @@ en = LangUtilEn(fp)
 
 @app.route("/")
 def home():
+    return render_template('base.html', params=en.params())
+
+
+@app.route("/work/")
+def home2():
     return render_template('home.html', params=en.params())
 
 
