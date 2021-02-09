@@ -17,19 +17,14 @@
                 url({{ url_for('static', filename='media/fonts/ambit/Ambit-Regular.woff') }}) format('woff');
             }
 
-        .video {
-            text-align: center;
-        }
 
         </style>
 
         <link rel="shortcut icon" type="image/png"
               href="{{ url_for('static', filename='media/favicon/favicon.ico') }}"/>
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{#        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">#}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-
-        <script src="{{ url_for('static', filename='js/lib/d3.min.js') }}"></script>
 
         <title>Centre for Digital Curiosity</title>
     {% endblock %}
@@ -43,13 +38,9 @@
         {% endblock %}
     </main>
 
-    <video class="video" width="320" height="240" controls>
-        <source src="{{ url_for('static', filename='media/viz.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    {% block lightbox_section %}
-    {% endblock %}
+    <div class="logo-cont">
+        <img src="{{ url_for('static', filename='media/outline.gif') }}" alt="logo">
+    </div>
 
     {% block jscript %}
     {% endblock %}

@@ -73,14 +73,6 @@ def writing():
     return render_template('page.html', params=en.params(), page=page, data=data)
 
 
-# TEACHING SECTION
-# sillabi and workshops
-
-@app.route('/work/teaching/')
-def teaching():
-    page, data = utils.teaching(fp, en)
-    return render_template('page.html', params=en.params(), page=page, data=data)
-
 
 # SPEAKING SECTION
 # talks and public lectures
@@ -98,15 +90,6 @@ def speaking():
 def press():
     page, data = utils.press(fp, en)
     return render_template('page.html', params=en.params(), page=page, data=data)
-
-
-# NOTE LIST SECTION
-# rendering note_list.html
-
-@app.route("/work/notebook/")
-def note_list():
-    data = utils.note_list(fp, en)
-    return render_template('note_list.html', params=en.params(), data=data)
 
 
 
